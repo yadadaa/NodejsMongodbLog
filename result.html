@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["first"].value;   
+    if (parseFloat(x).toString() === 'NaN') {
+        alert("请在第一个框中输入输入一个数字"+parseFloat(x));
+        return false;
+    }
+    var y = document.forms["myForm"]["second"].value;   
+    if (parseFloat(y).toString() === 'NaN') {
+        alert("请在第二个框中输入输入一个数字"+parseFloat(y));
+        return false;
+    }
+}
+</script>
+
+</head>
+<body>
+
+<p>-----------190110910133------mongodb操作-----------------------------------</p>
+<form name="myForm" action="/input" method="get">
+        数据1: <input type="text" name="first"><br>
+        数据2: <input type="text" name="second"> <br>
+        <input type="submit" name="submit1" value="Write">
+        <input type="submit" name="submit1" value="Read">
+       
+</form>
+<%= returnVal%>
+</body>
